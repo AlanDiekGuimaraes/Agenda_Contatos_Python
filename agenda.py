@@ -9,15 +9,23 @@ AGENDA['Brenda'] = {
     'email': 'brenda@brenda.com',
     'endereco': 'Rua: Mende leal 154'
 }
-def mostrar_contatos(): # Criando um metodo para criar todo os contatos da agenda.
+def mostrar_contatos(): # Criando um metodo para mostrar todos os contatos da agenda.
     for contato in AGENDA:
-        buscar_contato(contato)
+        buscar_contato(contato) # Chama a função de buscar os contatos da agenda.
         print(50*'-')
 
-def buscar_contato(contato):
+def buscar_contato(contato): # Criando um metodo para buscar os contatos da agenda.
     print('Nome:', contato)
     print('Telefone:', AGENDA[contato]['telefone'])
     print('Email:', AGENDA[contato]['email'])
     print('Endereço:', AGENDA[contato]['endereco'])
 
-mostrar_contatos()
+
+def incluir_editar_contato(contato, telefone, email, endereco):
+    AGENDA[contato] = {
+        'telefone': telefone,
+        'email': email,
+        'endereco': endereco
+    }
+    print(f'Contato {contato} adicionado/editado com sucesso!')
+
