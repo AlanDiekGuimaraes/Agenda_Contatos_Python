@@ -19,8 +19,7 @@ Execute o script agenda.py.
 Menu de Opções
 Ao executar o script, o menu a seguir será exibido:
 
-markdown
-Copiar código
+
 --------------------------------------------------
 1 - Mostrar todos os contatos da agenda
 2 - Buscar contato
