@@ -41,11 +41,13 @@ def incluir_editar_contato(contato, telefone, email, endereco): # Metodo de Incl
         'email': email,
         'endereco': endereco
     }
+    salvar()
     print(f'Contato {contato} adicionado/editado com sucesso!')
 
 def exluir_contato(contato): # Metodo para excluir o contato
     try:
         AGENDA.pop(contato)
+        salvar()
         print(f'Contato {contato} foi removido com sucesso!', sep='\n')
     except KeyError:
         print('Contato inexistente')
@@ -81,7 +83,32 @@ def importar_contatos(nome_do_arquivo):
     except Exception as erro:
         print('Algum erro inesperado ocoreu')
 
+def salvar():
+    exportar_contatos('database.csv')
 
+def carregar():
+    try:
+        with open('database.csv', 'r') as arquivo: # O parametro 'r' abre o arquivo em modo de leitura.
+            linhas = arquivo.readlines()
+            for linha in linhas:
+                detalhes = linha.strip().split(',')
+
+                nome = detalhes[0]
+                telefone = detalhes[1]
+                email = detalhes[2]
+                endereco = detalhes[3]
+
+                AGENDA[nome] = {
+                    'telefone': telefone,
+                    'email': email,
+                    'endereco': endereco
+                }
+        print(f'''Database carregado com sucesso.
+{len(AGENDA)} contado(s) carregado(s).''')
+    except FileNotFoundError:
+        print('Arquivo não encontrado')
+    except Exception as erro:
+        print('Algum erro inesperado ocoreu')
 
 def imprimir_menu(): # Metodo para imprimir o menu.
     print(50*'-')
@@ -95,6 +122,9 @@ def imprimir_menu(): # Metodo para imprimir o menu.
     print('0 - Fechar agenda')
     print(50 * '-')
 
+
+# Inicio do programa.
+carregar()
 while True:
     imprimir_menu()
     opcao = input('Digite sua opção: ')
@@ -137,4 +167,3 @@ while True:
     else:
         print('Opção inválida')
 
-# ate 1:40 minutos do 10 - aula 9 salvando nossa agenda.
