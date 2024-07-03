@@ -1,8 +1,8 @@
-#Agenda Telefônica em Python
+Agenda Telefônica em Python
 
 Este projeto é uma agenda telefônica simples desenvolvida em Python, que permite adicionar, editar, excluir e buscar contatos, além de importar e exportar os dados para arquivos CSV.
 
-###Funcionalidades
+Funcionalidades
 Mostrar todos os contatos: Exibe todos os contatos armazenados na agenda.
 Buscar contato: Permite buscar um contato específico pelo nome.
 Incluir contato: Adiciona um novo contato à agenda.
@@ -12,11 +12,11 @@ Exportar contatos: Exporta os contatos da agenda para um arquivo CSV.
 Importar contatos: Importa contatos de um arquivo CSV para a agenda.
 Salvar e Carregar: Salva automaticamente os dados em um arquivo CSV ao fechar o programa e carrega esses dados ao iniciar.
 
-##Como usar
-###Requisitos
+Como usar
+Requisitos
 Python 3.x
 
-###Execução
+Execução
 Clone ou faça o download deste repositório.
 Execute o script agenda.py.
 Menu de Opções
@@ -35,7 +35,7 @@ Ao executar o script, o menu a seguir será exibido:
 --------------------------------------------------
 Escolha a opção desejada digitando o número correspondente.
 
-###Exemplos de Uso
+Exemplos de Uso
 Incluir um novo contato:
 
 Digite 3 no menu principal.
