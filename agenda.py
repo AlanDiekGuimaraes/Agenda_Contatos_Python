@@ -1,14 +1,5 @@
 AGENDA = {}  # Criando uma Agenda vazia.
-'''AGENDA['Alan'] = {
-    'telefone': '1193454-3030',
-    'email': 'alan@alan.com',
-    'endereco': 'Rua: visconde'
-}
-AGENDA['Brenda'] = {
-    'telefone': '1193454-4040',
-    'email': 'brenda@brenda.com',
-    'endereco': 'Rua: Mende leal 154'
-}'''
+
 def mostrar_contatos(): # Criando um metodo para mostrar todos os contatos da agenda.
     if AGENDA:
         for contato in AGENDA:
